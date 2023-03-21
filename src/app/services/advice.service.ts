@@ -13,8 +13,8 @@ export class AdviceService {
   private _adviceTextSubject = new BehaviorSubject<string>('');
   public adviceText$ = this._adviceTextSubject.asObservable();
 
-  private _adviceNumberSubject = new BehaviorSubject<number>(0);
-  public adviceNumber = this._adviceNumberSubject.asObservable();
+  private _adviceIdSubject = new BehaviorSubject<number>(0);
+  public adviceId$ = this._adviceIdSubject.asObservable();
 
   constructor(private httpClient: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class AdviceService {
       .pipe(
         map((response: AdviceResponse) => response.slip),
         tap((slip: Slip) => {
-          this._adviceNumberSubject.next(slip.id);
+          this._adviceIdSubject.next(slip.id);
           this._adviceTextSubject.next(slip.advice);
         }),
       ).subscribe();

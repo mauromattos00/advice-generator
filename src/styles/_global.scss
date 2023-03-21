@@ -1,0 +1,11 @@
+@import "./color-variables";
+
+html {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    background-color: $dark-blue;
+}
+
+body {
+    margin: 0;
+}

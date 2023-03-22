@@ -1,4 +1,4 @@
-@import "../../../styles//color-variables";
+@import "../../../styles/color-variables";
 :host {
   position: absolute;
   bottom: -1rem;
@@ -16,8 +16,12 @@
   border: 0;
   cursor: pointer;
   transition: box-shadow 0.1s ease-out;
-}
 
-.random-btn:hover {
-  box-shadow: 0 0 0.8rem $neon-green;
+  &:hover {
+    box-shadow: 0 0 0.8rem $neon-green;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
 }

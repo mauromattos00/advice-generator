@@ -1,6 +1,15 @@
 @import "../../../styles//color-variables";
+:host {
+  position: absolute;
+  bottom: -1rem;
+}
 
 .random-btn {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: .5rem;
   background-color: $neon-green;
   border-radius: 50%;

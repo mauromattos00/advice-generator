@@ -1,0 +1,41 @@
+@import "../styles/color-variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.advice-card {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $dark-grayish-blue;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: 0 2px 5px hsl(218, 23%, 15%);
+}
+
+.advice-id {
+  font-size: 0.5rem;
+  letter-spacing: .15rem;
+  margin-bottom: .6rem;
+}
+
+.advice-card {
+  padding: 1rem;
+}
+
+.separator {
+  padding: 1rem 0;
+}
+
+@media(max-width: 550px) {
+  .advice-card {
+    max-width: 280px;
+  }
+}

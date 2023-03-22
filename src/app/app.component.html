@@ -1,1 +1,14 @@
-app WORKS
+<div class="advice-card" *ngIf="{ id: adviceId$ | async, text: adviceText$ | async} as advice">
+  <app-text type="adviceId" class="color-neon-green advice-id">
+    ADVICE #{{ advice.id}}
+  </app-text>
+
+  <app-text type="adviceText" class="color-light-cyan text-center">
+    “{{ advice.text }}”
+  </app-text>
+  <picture>
+    <source srcset="../assets/pattern-divider-desktop.svg" media="(min-width: 550px)">
+    <img class="separator" src="../assets/pattern-divider-mobile.svg">
+  </picture>
+  <app-button (buttonClicked)="getRandomAdvice()"></app-button>
+</div>
